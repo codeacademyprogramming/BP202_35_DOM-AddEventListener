@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+
+#tab-menu{
+    display: flex;
+    justify-content: center;
+}
+
+#tab-menu .menu-item{
+    width: 100px;
+    height: 60px;
+    list-style: none;
+    text-align: center;
+    line-height: 60px;
+    background-color: rgb(206, 201, 201);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+
+}
+
+#tab-menu .menu-item:hover{
+    border: 1px solid rgb(28, 28, 28);
+}
+
+#tab-menu .active-menu-item{
+    background-color: rgb(113, 111, 111);
+}
+

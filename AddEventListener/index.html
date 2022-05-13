@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btn">Hello</button>
+
+    <div class="box">
+        <ul id="list">
+            <li class="list-item">
+                <a href="">Link1</a>
+            </li>
+            <li class="list-item">
+                <a href="">Link1</a>
+            </li>
+            <li class="list-item">
+                <a href="">Link1</a>
+            </li>
+            <li class="list-item">
+                <a href="">Link1</a>
+            </li>
+        </ul>
+    </div>
+    
+
+    <script>
+
+        // document.getElementById('btn').onclick = function(){
+        //     alert(this.innerText);
+        // }
+
+        // document.getElementById('btn').onclick = function(){
+        //     alert("Salam");
+        // }
+
+        document.getElementById('btn').addEventListener('click',function(){
+            alert(this.innerText);
+        })
+
+        document.getElementById('btn').addEventListener('click',function(){
+            alert('Salam');
+        })
+
+        let firstA = document.querySelector('a');
+
+        console.log(firstA)
+
+        console.log(firstA.parentNode)
+
+        console.log(firstA.parentNode.nextElementSibling)
+
+        console.log(document.getElementById('list').children)
+
+        document.getElementById('list').children[1].children[0].style.color = 'red';
+        
+
+        
+        function showAllParents(elem){
+            if(elem.parentNode){
+                console.log(elem.parentNode)
+                showAllParents(elem.parentNode)
+            }
+        }
+
+
+        console.log("===========parents===========")
+        showAllParents(firstA)
+
+
+
+    </script>
+</body>
+</html>
